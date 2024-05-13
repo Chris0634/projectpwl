@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Penduduk</title>
+    <style>
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        nav li {
+            float: left;
+        }
+        nav li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        nav li a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        .container {
+            max-width: 800px;
+            margin: 60px auto 0; /* 60px untuk margin atas */
+            padding: 20px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            font-weight: bold;
+        }
+        .form-control {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        .btn-tambah {
+            position: absolute;
+            top: 100px;
+            right: 25px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #333;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+<h1>Penduduk</h1>
+<nav>
+    <ul>
+        <li><a href="?menu=home">Home</a></li>
+        <li><a href="?menu=penduduk">Penduduk</a></li>
+        <li><a href="?menu=kartukeluarga">Kartu Keluarga</a></li>
+    </ul>
+</nav>
+<div class="container">
+    <button class="btn-tambah">Tambah</button>
+    <h2>Data Penduduk</h2>
+    <table>
+        <thead>
+        <tr>
+            <th>NIK</th>
+            <th>Nama Lengkap</th>
+            <th>Alamat</th>
+            <th>Tanggal Lahir</th>
+            <th>Golongan Darah</th>
+            <th>Agama</th>
+            <th>Status</th>
+            <th>Nomor KK</th>
+            <th>Foto</th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+    <h2>Form Penduduk</h2>
+    <div class="card p-4">
+        <form method="post">
+            <div class="form-group">
+                <label for="ctz-id">NIK</label>
+                <input type="text" class="form-control" id="ctz-id" placeholder="NIK (Contoh: 327204010119950001)" name="nik" required autofocus maxlength="16">
+            </div>
+            <div class="form-group">
+                <label for="ctz-nama">Nama Lengkap</label>
+                <input type="text" maxlength="100" class="form-control" id="ctz-nama" placeholder="Contoh: John Doe" required name="nama">
+            </div>
+            <div class="form-group">
+                <label for="ctz-alamat">Alamat</label>
+                <textarea maxlength="300" class="form-control" id="ctz-alamat" placeholder="Contoh: Jalan Asia Afrika No. 100" required name="alamat"></textarea>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="ctz-birth-date">Tanggal Lahir</label>
+                    <input type="date" class="form-control" id="ctz-birth-date" required name="tgl_lahir">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="ctz-goldar">Golongan Darah</label>
+                    <select class="form-control" id="ctz-goldar" name="gol_darah" required>
+                        <option value="A">A</option>
+                        <option value="B">B</option>
+                        <option value="O">O</option>
+                        <option value="AB">AB</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="ctz-religion">Agama</label>
+                    <select class="form-control" id="ctz-religion" name="agama" required>
+                        <option value="Budha">Budha</option>
+                        <option value="Hindu">Hindu</option>
+                        <option value="Islam">Islam</option>
+                        <option value="Katolik">Katolik</option>
+                        <option value="Kristen">Kristen</option>
+                        <option value="Kong Hu Cu">Kong Hu Cu</option>
+                        <option value="Lainnya">Lainnya</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="ctz-status">Status</label>
+                    <select class="form-control" id="ctz-status" name="status" required>
+                        <option value="Belum Menikah">Belum Menikah</option>
+                        <option value="Menikah">Menikah</option>
+                        <option value="Duda">Duda</option>
+                        <option value="Janda">Janda</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="ctz-no-kk">Nomor KK</label>
+                <select class="form-control select2" id="ctz-no-kk" name="kartu_keluarga_id" required>
+                    <option value="No Kartu Keluarga"></option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="ctz-profile">Foto</label>
+                <input type="file" class="form-control" id="ctz-profile" name="profile_picture">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+</div>
+</body>
+</html>
